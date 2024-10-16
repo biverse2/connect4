@@ -3,15 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <script src="gameLogic.js"></script>
     <title>Connect 4</title>
 </head>
 <body>
-    <h1>Connect 4</h1>
-    <h2 id = "winner"></h2></h2>
-    <div id = "board"></div>
-    <div id="currentPlayerDisplay">Current Player: Player 1</div>
+    <header>
+        <div>
+            <h2>ConnectFour</h2>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <button class="btn btn-hero" id="btnPlay" onclick="window.location.href='gameboard.html'">Play</button>
+        </div>
+        <div class="container">
+            <button class="btn btn-hero" id="btnSettings" onclick="window.location.href='settings.html'">Settings</button>
+        </div>
+    </main>
+    <footer>
 
+    </footer>
 </body>
 </html>
