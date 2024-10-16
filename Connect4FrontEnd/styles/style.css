@@ -19,9 +19,9 @@ body {
 }
 
 .player1 {
-   background-image: url('player1-chip.png');
+   background-image: url('Connect4FrontEnd/assets/RedChip.png');
 }
 
 .player2 {
-   background-image: url('player2-chip.png');
+   background-image: url('Connect4FrontEnd/assets/YellowChip.png');
 }

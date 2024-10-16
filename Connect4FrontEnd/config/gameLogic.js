@@ -1,3 +1,43 @@
+const gameQueue = new Queue();
+
+function promptForGameMode() {
+    const firstPlayer = gameQueue.getFirstPlayer();
+    
+    if (firstPlayer) {
+        console.log(`${firstPlayer}, please choose a game mode:`);
+        
+        const selectedMode = 'Classic';  
+        
+        setGameMode(selectedMode);
+
+        startGame(firstPlayer);
+    } else {
+        console.log('No players in queue.');
+    }
+}
+
+function startGame(player) {
+    console.log(`${player} is starting a game in ${getGameMode()} mode.`);
+    
+    gameQueue.removePlayer();
+    
+}
+
+promptForGameMode();
+
+let currentGameMode = 'Classic';
+
+function setGameMode(mode) {
+    if (mode === 'Classic' || mode === 'Arcade' || mode === 'Attract') {
+        currentGameMode = mode;
+    } else {
+        currentGameMode = 'Classic';
+    }
+}
+function getGameMode() {
+    return currentGameMode;
+}
+
 function createBoard () {
 
     const rows = 6;
@@ -71,6 +111,7 @@ function switchPlayer() {
     currentPlayer = currentPlayer === 1 ? 2 : 1;
     updateCurrentPlayerDisplay();  
 }
+
 
 
 
